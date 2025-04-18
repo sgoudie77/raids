@@ -1,0 +1,294 @@
+/* Global Styles Start Here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    font-size: 62.5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+:root {
+    --clr-dark-gray: #2f3136;
+    --clr-dark-gray-tr: rgba(47, 49, 54, 0.9);
+    --clr-white: #f5f5f5;
+    --clr-black: #000000;
+    --fs-p: 1.25rem;
+    --bor-rad: 2px;
+    --box-shad-dark: 0 0 12px #18191b;
+    --box-shad-morph: 5px 5px 5px #282a2e,
+                       -3px -3px 6px #36383e; 
+    --box-shad-morph-inset: inset 5px 5px 5px #282a2e,
+                            inset -1px -1px 1px #36383e;
+}
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    max-width: 100vw;
+    background-color: #2f3136;
+}
+/* Global Styles End Here */
+
+/* Main Styles Start Here */
+.bgs-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.bg-raids {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: auto;
+    background-color: var(--clr-dark-gray);
+    box-shadow: var(--box-shad-morph-inset);
+    border-radius: var(--bor-rad);
+    padding: 2.5rem;
+}
+/* Main Styles End Here */
+
+/* Title Styles Start Here */
+.bg-title {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: .5rem 4.75rem;  
+    margin-top: .25rem;
+    margin-bottom: .5rem;
+    box-shadow: var(--box-shad-dark);
+    background-color: var(--clr-dark-gray-tr);
+    border-radius: var(--bor-rad);
+}
+.bg-title img {
+    width:225px;
+    max-height: 45px;
+    opacity: 0.5;
+    padding-top: .25rem;
+}
+.bg-title img:nth-child(1) {
+    width:50px;
+}
+.bg-title img:nth-child(3) {
+    width:75px;
+}
+/* Title Styles End Here */
+
+/* Info Styles Start Here */
+.bg-info {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    box-shadow: var(--box-shad-dark);
+    margin: .5rem 0;
+    width: 100%;
+    border-radius: var(--bor-rad);
+}
+/* Info Styles End Here */
+
+/* Lane Styles Start Here */
+.bg-lane {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    background-image: url(img/lane-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 55%;
+    z-index: 0;
+}
+.bg-lane-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+    background-color: var(--clr-dark-gray-tr);
+}
+.bg-lane p {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: var(--clr-white);
+    letter-spacing: 1px;
+    z-index: 999;
+}
+/* Lane Styles End Here */
+
+/* Roles, Players, and Champs General Styles Start Here */
+.bg-roles, .bg-players, .bg-champs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: .25rem 0;
+    background-color: var(--clr-dark-gray-tr);
+}
+.bg-players, .bg-champs {
+    width: 29.80%;
+}
+.bg-roles {
+    width: 25%;
+    justify-content: center;
+    box-shadow: var(--box-shad-morph-inset);
+    margin: .5rem .125rem;
+}
+.role {
+    padding: .4rem;
+    text-transform: uppercase;
+    display: flex;
+}
+.role img {
+    width: 22px;
+    height: 22px;
+    margin-right: .5rem;
+}
+.bg-roles p, .bg-champs p {
+    font-size: 1.25rem;
+    color: var(--clr-white);
+    letter-spacing: 1px;
+    padding: .35rem 0;
+}
+/* Roles, Players, and Champs General Styles End Here */
+
+/* Roles, Players, and Champs Input Styles Start Here */
+.bg-players input,
+.bg-champs input {
+    padding: .75rem 1rem;
+    width: 283px;
+    margin: .25rem 0;
+    outline: none;
+    border: none;
+    box-shadow: var(--box-shad-morph-inset);
+    background-color: var(--clr-dark-gray);
+    color: var(--clr-white);
+}
+.l1-assault input,
+.l2-assault input,
+.l3-assault input,
+.l1-assault input::placeholder,
+.l2-assault input::placeholder,
+.l3-assault input::placeholder {
+    color: rgb(137, 198, 248);
+    opacity: .4;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+.l1-vanguard input,
+.l2-vanguard input,
+.l3-vanguard input,
+.l1-vanguard input::placeholder,
+.l2-vanguard input::placeholder,
+.l3-vanguard input::placeholder {
+    color: rgb(250, 250, 155);
+    opacity: .4;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+.l1-tactician input,
+.l2-tactician input,
+.l3-tactician input,
+.l1-tactician input::placeholder,
+.l2-tactician input::placeholder,
+.l3-tactician input::placeholder {
+    color: rgb(250, 136, 250);
+    opacity: .4;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+/* Roles, Players, and Champs Input Styles End Here */
+
+/* Backup Styles Start Here */
+.bg-backup {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: .5rem;
+    color: var(--clr-white);
+    box-shadow: var(--box-shad-dark);
+    border-radius: var(--bor-rad);
+}
+.backup-title {
+    width: 40%;
+    text-align: center;
+    font-size: var(--fs-p);
+    text-transform: uppercase;
+    padding: 1rem 0;
+    letter-spacing: 1px;
+}
+.backup-player, .backup-champ {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    font-size: 1.25rem;
+    padding: .5rem 0;
+    letter-spacing: 1px;
+}
+.backup-player input,
+.backup-champ input {
+    width: 286px;
+    border: none;
+    outline: none;
+    padding: .75rem 1rem;
+    background-color: var(--clr-dark-gray);
+    box-shadow: var(--box-shad-morph-inset);
+    color: var(--clr-white);
+    border-radius: var(--bor-rad);
+}
+.backup-player input::placeholder,
+.backup-champ input::placeholder {
+    opacity: 0.9;
+}
+/* Backup Styles End Here */
+
+/* Button Area Styles Start Here */
+.button-area {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+.button-area {
+    margin-top: 2.5rem;
+}
+.button-area a {
+    margin: 0 2rem;
+    width: 150px;
+    text-decoration: none;
+    color: var(--clr-white);
+    font-size: var(--fs-p);
+    box-shadow: var(--box-shad-dark);
+    text-align: center;
+    padding: .8rem 0;
+    border-radius: var(--bor-rad);
+    letter-spacing: 1px;
+    transition: 0.3s ease-in-out;
+}
+.button-area a:hover {
+    box-shadow: var(--box-shad-morph-inset);
+    border-radius: var(--bor-rad);
+}
+/* Button Area Styles End Here */
+
+/* Responsive Styles Start Here */
+/* Responsive Styles End Here */
